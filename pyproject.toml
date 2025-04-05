@@ -1,0 +1,25 @@
+[project]
+requires-python = "==3.10.*"
+authors = [
+    {name = "Gabriel P. Lopes"},
+    {name = "Gabriel P. Lopes", email = "gabriel.lopes1680@gmail.com"},
+]
+description = "Default template for PDM package"
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["tdd", "cli", "kata", "ohce", "python"]
+
+name = "ohce"
+dynamic = ["version"]
+
+dependencies = [
+    "parameterized",
+    "pytest==8.3.2"
+]
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+test = "pytest ./test"
+start = "python3 ./src"
